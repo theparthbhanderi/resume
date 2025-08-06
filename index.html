@@ -402,13 +402,59 @@
         .education-details p, .education-year, .project p, .project-features, .skill-category li, .interest-item p, .contact-item, .contact-item a, .contact-item span {
             color: #f5f6fa !important;
         }
+        .profile-photo {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            background: transparent;
+            margin-right: 18px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .profile-photo-frame {
+            display: inline-block;
+            padding: 0;
+            border-radius: 50%;
+            background: transparent;
+            margin-right: 18px;
+            vertical-align: middle;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .profile-photo-frame {
+                margin: 0 auto 10px auto;
+                display: block;
+            }
+            .profile-photo {
+                margin: 0 auto 10px auto;
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="resume-container">
         <div class="header">
-            <h1>🧑‍💻 Parth Rameshbhai Bhanderi</h1>
-            <h2>Computer Engineering Student | Web Developer | AI/ML Enthusiast</h2>
+            <div class="header-content">
+                <span class="profile-photo-frame">
+                    <img src="profile.jpg" alt="Passport Photo" class="profile-photo" />
+                </span>
+                <div>
+                    <h1>🧑‍💻 Parth Rameshbhai Bhanderi</h1>
+                    <h2>Computer Engineering Student | Web Developer | AI/ML Enthusiast</h2>
+                </div>
+            </div>
             <div class="contact-info">
                 <div class="contact-item">
                     <span class="location">📍 Ahmedabad, Gujarat, India</span>
