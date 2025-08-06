@@ -348,6 +348,54 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+        @media (max-width: 600px) {
+            body {
+                padding: 6px;
+            }
+            .resume-container {
+                border-radius: 10px;
+                padding: 0;
+            }
+            .header {
+                padding: 24px 8px;
+            }
+            .main-content {
+                padding: 18px 6px;
+            }
+            .section {
+                padding: 14px 6px;
+                border-radius: 8px;
+            }
+            .education-item, .project, .skill-category, .interest-item {
+                padding: 10px 6px;
+                border-radius: 8px;
+            }
+            h1 {
+                font-size: 1.6em;
+            }
+            h2 {
+                font-size: 1em;
+            }
+            .section-title {
+                font-size: 1.1em;
+            }
+            .skills-grid, .interests {
+                grid-template-columns: 1fr !important;
+                gap: 10px;
+            }
+            .contact-info {
+                grid-template-columns: 1fr !important;
+                gap: 8px;
+            }
+            .project-features a {
+                display: block !important;
+                width: 100%;
+                text-align: center;
+                font-size: 1em;
+                padding: 10px 0 !important;
+                margin-top: 8px;
+            }
+        }
         .contact-item span.location {
             color: #fff !important;
         }
