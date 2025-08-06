@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Bhanderi - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .resume-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header h2 {
+            font-size: 1.2em;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .contact-item a:hover {
+            color: #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+            transform: translateY(-1px);
+        }
+        
+        .main-content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .objective {
+            text-align: justify;
+            line-height: 1.7;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .skill-category li {
+            margin-bottom: 3px;
+            font-size: 0.9em;
+        }
+        
+        .project {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #764ba2;
+        }
+        
+        .project h4 {
+            color: #764ba2;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .project p {
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        
+        .education-details h4 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .education-details p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .education-year {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .languages-hobbies {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .languages ul, .hobbies ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .languages li, .hobbies li {
+            margin-bottom: 5px;
+            padding: 5px 0;
+            font-size: 0.9em;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .languages-hobbies {
+                grid-template-columns: 1fr;
+            }
+            .education-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1>Parth Bhanderi</h1>
+            <h2>Computer Engineering Student</h2>
+                            <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <a href="mailto:theparthbhanderi@gmail.com">theparthbhanderi@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <a href="tel:+919937637474">+91 9937637474</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Ahmedabad, Gujarat</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>🔗</span>
+                        <a href="https://www.linkedin.com/in/parth-bhanderi-366433330" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>💻</span>
+                        <a href="https://github.com/theparthbhanderi" target="_blank">GitHub Profile</a>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="section">
+                <h3 class="section-title">Career Objective</h3>
+                <p class="objective">
+                    I am a passionate and dedicated Computer Engineering student with hands-on experience in full-stack web development and beginner-level expertise in AI/ML. I aim to apply my skills in real-world projects and grow as a developer. Seeking internship or freelance opportunities in web development, AI/ML, or software development to gain practical experience and contribute to innovative projects.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>C++</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Web Technologies</h4>
+                        <ul>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Platforms</h4>
+                        <ul>
+                            <li>GitHub</li>
+                            <li>Figma</li>
+                            <li>Android Studio</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Databases</h4>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>ML & Data Science</h4>
+                        <ul>
+                            <li>NumPy</li>
+                            <li>Pandas</li>
+                            <li>Matplotlib</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Projects</h3>
+                <div class="project">
+                    <h4>Traffic Sign Recognition System using CNN</h4>
+                    <p>Built a machine learning model using Python and GTSRB dataset to recognize traffic signs. Implemented Convolutional Neural Networks on Google Colab with data preprocessing and model training. Achieved accurate classification of various traffic sign categories.</p>
+                </div>
+                <div class="project">
+                    <h4>Personal Portfolio Website</h4>
+                    <p>Developed a responsive multi-page portfolio website using HTML, CSS, and JavaScript. Features include smooth navigation, interactive elements, and mobile-friendly design. Showcases projects, skills, and professional information effectively.</p>
+                </div>
+                <div class="project">
+                    <h4>Interactive Sales Dashboard</h4>
+                    <p>Created a comprehensive sales analytics dashboard using Pandas and Plotly in Google Colab. Includes data visualization, filtering capabilities, and interactive charts for business intelligence and decision-making support.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Education</h3>
+                <div class="education-item">
+                    <div class="education-details">
+                        <h4>B.Tech in Computer Engineering</h4>
+                        <p>Indus University • Ahmedabad, Gujarat</p>
+                    </div>
+                    <div class="education-year">
+                        <p>2022 - 2026</p>
+                        <p>Expected Graduation: 2026</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Languages & Hobbies</h3>
+                <div class="languages-hobbies">
+                    <div class="languages">
+                        <h4>Languages</h4>
+                        <ul>
+                            <li>English (Professional)</li>
+                            <li>Hindi (Native)</li>
+                            <li>Gujarati (Native)</li>
+                        </ul>
+                    </div>
+                    <div class="hobbies">
+                        <h4>Hobbies & Interests</h4>
+                        <ul>
+                            <li>Watching tech videos and tutorials</li>
+                            <li>Coding small projects and experiments</li>
+                            <li>Exploring new AI tools and technologies</li>
+                            <li>Reading about emerging technologies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
