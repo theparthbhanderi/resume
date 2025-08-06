@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parth Bhanderi - Resume</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,105 +14,255 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'DM Sans', 'Manrope', 'Rubik', Arial, sans-serif;
+            font-weight: 300;
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            color: #f5f6fa;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        h1, h2, h3, h4, .section-title, .header h1, .header h2 {
+            font-family: 'Space Grotesk', 'Poppins', 'Inter', Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        h2 {
+            font-size: 1.3em;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
         }
         
         .resume-container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
             overflow: hidden;
+            position: relative;
+        }
+        
+        .resume-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: none;
+            pointer-events: none;
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
         
         .header h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 10px;
             font-weight: 300;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         
         .header h2 {
-            font-size: 1.2em;
+            font-size: 1.3em;
             font-weight: 300;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
         }
         
         .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
         
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 5px;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         .contact-item a {
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
         }
         
         .contact-item a:hover {
             color: #f0f0f0;
-            border-bottom: 1px solid #f0f0f0;
-            transform: translateY(-1px);
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
         }
         
         .main-content {
-            padding: 30px;
+            padding: 40px 30px;
+            position: relative;
+            z-index: 1;
         }
         
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 35px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .section:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
         
         .section-title {
-            font-size: 1.3em;
+            font-size: 1.4em;
             font-weight: 600;
-            color: #667eea;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 5px;
+            color: white;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.5), transparent);
+            border-radius: 1px;
+        }
+        
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             margin-bottom: 15px;
         }
         
-        .objective {
-            text-align: justify;
-            line-height: 1.7;
+        .education-details h4 {
+            color: white;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .education-details p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95em;
+        }
+        
+        .education-year {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: right;
+        }
+        
+        .project {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .project:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+        }
+        
+        .project h4 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .project p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .project-features {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 3px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .project-features strong {
+            color: rgba(255, 255, 255, 0.9);
         }
         
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
         
         .skill-category {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 4px solid #667eea;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-3px);
         }
         
         .skill-category h4 {
-            color: #667eea;
-            margin-bottom: 8px;
-            font-size: 0.95em;
+            color: white;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .skill-category ul {
@@ -119,68 +271,44 @@
         }
         
         .skill-category li {
-            margin-bottom: 3px;
-            font-size: 0.9em;
-        }
-        
-        .project {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 6px;
-            border-left: 4px solid #764ba2;
-        }
-        
-        .project h4 {
-            color: #764ba2;
-            margin-bottom: 8px;
-            font-size: 1.1em;
-        }
-        
-        .project p {
-            font-size: 0.9em;
-            line-height: 1.5;
-        }
-        
-        .education-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 6px;
-            margin-bottom: 10px;
-        }
-        
-        .education-details h4 {
-            color: #667eea;
-            margin-bottom: 5px;
-        }
-        
-        .education-details p {
-            font-size: 0.9em;
-            color: #666;
-        }
-        
-        .education-year {
-            font-weight: 600;
-            color: #667eea;
-        }
-        
-        .languages-hobbies {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        .languages ul, .hobbies ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .languages li, .hobbies li {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+            color: rgba(255, 255, 255, 0.8);
             padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+        
+        .interests {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .interest-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .interest-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+        
+        .interest-item span {
+            display: block;
+            font-size: 1.5em;
+            margin-bottom: 8px;
+        }
+        
+        .interest-item p {
+            color: rgba(255, 255, 255, 0.8);
             font-size: 0.9em;
         }
         
@@ -191,15 +319,21 @@
             .resume-container {
                 box-shadow: none;
                 margin: 0;
+                background: white;
+                color: black;
+            }
+            .header, .section {
+                background: white;
+                color: black;
+            }
+            .contact-item, .project, .skill-category, .interest-item {
+                background: #f8f9fa;
+                color: black;
             }
         }
         
         @media (max-width: 768px) {
             .contact-info {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .languages-hobbies {
                 grid-template-columns: 1fr;
             }
             .education-item {
@@ -207,140 +341,151 @@
                 align-items: flex-start;
                 gap: 10px;
             }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .interests {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .contact-item span.location {
+            color: #fff !important;
+        }
+        .education-details p, .education-year, .project p, .project-features, .skill-category li, .interest-item p, .contact-item, .contact-item a, .contact-item span {
+            color: #f5f6fa !important;
         }
     </style>
 </head>
 <body>
     <div class="resume-container">
         <div class="header">
-            <h1>Parth Bhanderi</h1>
-            <h2>Computer Engineering Student</h2>
-                            <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📧</span>
-                        <a href="mailto:theparthbhanderi@gmail.com">theparthbhanderi@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <span>📱</span>
-                        <a href="tel:+919937637474">+91 9937637474</a>
-                    </div>
-                    <div class="contact-item">
-                        <span>📍</span>
-                        <span>Ahmedabad, Gujarat</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>🔗</span>
-                        <a href="https://www.linkedin.com/in/parth-bhanderi-366433330" target="_blank">LinkedIn Profile</a>
-                    </div>
-                    <div class="contact-item">
-                        <span>💻</span>
-                        <a href="https://github.com/theparthbhanderi" target="_blank">GitHub Profile</a>
-                    </div>
+            <h1>🧑‍💻 Parth Rameshbhai Bhanderi</h1>
+            <h2>Computer Engineering Student | Web Developer | AI/ML Enthusiast</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="location">📍 Ahmedabad, Gujarat, India</span>
                 </div>
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:theparthbhanderi@gmail.com">theparthbhanderi@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <a href="tel:+919924952914">+91 99249 52914</a>
+                </div>
+                <div class="contact-item">
+                    <span>🔗</span>
+                    <a href="https://github.com/theparthbhanderi" target="_blank">GitHub: @theparthbhanderi</a>
+                </div>
+                <div class="contact-item">
+                    <span>📸</span>
+                    <a href="https://instagram.com/theparthbhanderi" target="_blank">Instagram: @theparthbhanderi</a>
+                </div>
+            </div>
         </div>
         
         <div class="main-content">
             <div class="section">
-                <h3 class="section-title">Career Objective</h3>
-                <p class="objective">
-                    I am a passionate and dedicated Computer Engineering student with hands-on experience in full-stack web development and beginner-level expertise in AI/ML. I aim to apply my skills in real-world projects and grow as a developer. Seeking internship or freelance opportunities in web development, AI/ML, or software development to gain practical experience and contribute to innovative projects.
-                </p>
-            </div>
-            
-            <div class="section">
-                <h3 class="section-title">Technical Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Programming Languages</h4>
-                        <ul>
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>C++</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Web Technologies</h4>
-                        <ul>
-                            <li>HTML, CSS, JavaScript</li>
-                            <li>React.js</li>
-                            <li>Node.js</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Tools & Platforms</h4>
-                        <ul>
-                            <li>GitHub</li>
-                            <li>Figma</li>
-                            <li>Android Studio</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Databases</h4>
-                        <ul>
-                            <li>MySQL</li>
-                            <li>MongoDB</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>ML & Data Science</h4>
-                        <ul>
-                            <li>NumPy</li>
-                            <li>Pandas</li>
-                            <li>Matplotlib</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h3 class="section-title">Projects</h3>
-                <div class="project">
-                    <h4>Traffic Sign Recognition System using CNN</h4>
-                    <p>Built a machine learning model using Python and GTSRB dataset to recognize traffic signs. Implemented Convolutional Neural Networks on Google Colab with data preprocessing and model training. Achieved accurate classification of various traffic sign categories.</p>
-                </div>
-                <div class="project">
-                    <h4>Personal Portfolio Website</h4>
-                    <p>Developed a responsive multi-page portfolio website using HTML, CSS, and JavaScript. Features include smooth navigation, interactive elements, and mobile-friendly design. Showcases projects, skills, and professional information effectively.</p>
-                </div>
-                <div class="project">
-                    <h4>Interactive Sales Dashboard</h4>
-                    <p>Created a comprehensive sales analytics dashboard using Pandas and Plotly in Google Colab. Includes data visualization, filtering capabilities, and interactive charts for business intelligence and decision-making support.</p>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h3 class="section-title">Education</h3>
+                <h3 class="section-title">🎓 Education</h3>
                 <div class="education-item">
                     <div class="education-details">
-                        <h4>B.Tech in Computer Engineering</h4>
-                        <p>Indus University • Ahmedabad, Gujarat</p>
+                        <h4>Bachelor of Technology (B.Tech), Computer Engineering</h4>
+                        <p>Indus University, Ahmedabad</p>
                     </div>
                     <div class="education-year">
-                        <p>2022 - 2026</p>
-                        <p>Expected Graduation: 2026</p>
+                        <p>2022 – 2026</p>
                     </div>
                 </div>
             </div>
             
             <div class="section">
-                <h3 class="section-title">Languages & Hobbies</h3>
-                <div class="languages-hobbies">
-                    <div class="languages">
-                        <h4>Languages</h4>
+                <h3 class="section-title">💼 Projects</h3>
+                <div class="project">
+                    <h4>1. Smart Vendor Website</h4>
+                    <p>A modern e-commerce web platform built with HTML, CSS, and JavaScript to connect local vendors and customers.</p>
+                    <div class="project-features">
+                        <strong>🔧 Features:</strong> Product listing, responsive UI, vendor contact system.
+                    </div>
+                </div>
+                <div class="project">
+                    <h4>2. School Management System (Android App)</h4>
+                    <p>A Java + XML based Android app to manage student attendance, timetable, and communication between teachers and students.</p>
+                    <div class="project-features">
+                        <strong>🔧 Features:</strong> Login system, timetable module, student records.
+                    </div>
+                </div>
+                <div class="project">
+                    <h4>3. Modern Portfolio Website</h4>
+                    <p>A stunning glassmorphic portfolio website with modern design principles, smooth animations, and a fully responsive layout.</p>
+                    <div class="project-features">
+                        <strong>Live:</strong> <a href="https://theparthbhanderi.github.io/portfolio/" target="_blank" style="color:#7dd3fc;text-decoration:underline;">theparthbhanderi.github.io/portfolio/</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">🛠️ Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>💻 Languages</h4>
                         <ul>
-                            <li>English (Professional)</li>
-                            <li>Hindi (Native)</li>
-                            <li>Gujarati (Native)</li>
+                            <li>Python</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
                         </ul>
                     </div>
-                    <div class="hobbies">
-                        <h4>Hobbies & Interests</h4>
+                    <div class="skill-category">
+                        <h4>🛠️ Tools</h4>
                         <ul>
-                            <li>Watching tech videos and tutorials</li>
-                            <li>Coding small projects and experiments</li>
-                            <li>Exploring new AI tools and technologies</li>
-                            <li>Reading about emerging technologies</li>
+                            <li>Android Studio</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Canva</li>
+                            <li>VS Code</li>
                         </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>🎯 Specialization</h4>
+                        <ul>
+                            <li>Web Design</li>
+                            <li>UI/UX</li>
+                            <li>Responsive Frontend</li>
+                            <li>AI/ML (Learning phase)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>💾 Platform</h4>
+                        <ul>
+                            <li>macOS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">🎯 Interests</h3>
+                <div class="interests">
+                    <div class="interest-item">
+                        <span>🌐</span>
+                        <p>Web Development</p>
+                    </div>
+                    <div class="interest-item">
+                        <span>🤖</span>
+                        <p>AI/ML</p>
+                    </div>
+                    <div class="interest-item">
+                        <span>🎨</span>
+                        <p>UI/UX Design</p>
+                    </div>
+                    <div class="interest-item">
+                        <span>📺</span>
+                        <p>Tech Videos & Movies</p>
+                    </div>
+                    <div class="interest-item">
+                        <span>📱</span>
+                        <p>Smart Gadgets</p>
                     </div>
                 </div>
             </div>
